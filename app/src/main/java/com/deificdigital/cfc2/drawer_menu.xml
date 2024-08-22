@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/nav_account"
+        android:title="My Account"
+        android:icon="@drawable/ic_profile"/>
+    <item
+        android:id="@+id/nav_services"
+        android:title="My Services"
+        android:icon="@drawable/ic_service"/>
+    <item
+        android:id="@+id/nav_notifications"
+        android:title="Notification"
+        android:icon="@drawable/ic_notification"/>
+    <item
+        android:id="@+id/nav_delete_account"
+        android:title="Delete Account"
+        android:icon="@drawable/ic_logout"/>
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Logout"
+        android:icon="@drawable/ic_logout"/>
+</menu>
