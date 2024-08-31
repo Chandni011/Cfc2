@@ -18,12 +18,12 @@ import com.deificdigital.cfc2.R;
 public class OthersActivity extends AppCompatActivity {
 
     ImageView ivDog, ivCow, ivUdyaan, ivCivil, ivSewerage, ivSewerageTax, ivSewerageAssessment, ivWater, ivWaterMutation, ivLightning,
-            ivHouseTax, ivBooking, ivPension, ivTradeLicense, ivAds, ivOutsourcing, ivEncrochment, ivMiscellaneous, ivSewerageComplaint;
+            ivHouseTax, ivBooking, ivPension, ivTradeLicense, ivAds, ivOutsourcing, ivEncrochment, ivMiscellaneous, ivSewerageComplaint, ivBack;
 
     LinearLayout llCow, llSewerage, llSewerageTax, llSewerageAssessment, llWater, llWaterMutation, llHouseTax
-            ,llBooking, llTradeLicense, llOutsourcing, llEncrochment;
+            ,llBooking, llTradeLicense, llOutsourcing, llEncrochment, llSewerageComplaint;
 
-    TextView tvDog, tvUdyaan, tvCivil, tvLightning, tvPension, tvAds, tvMiscellaneous, tvSewerageComplaint;
+    TextView tvDog, tvUdyaan, tvCivil, tvLightning, tvPension, tvAds, tvMiscellaneous;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,7 @@ public class OthersActivity extends AppCompatActivity {
         ivEncrochment = findViewById(R.id.ivEncrochment);
         ivMiscellaneous = findViewById(R.id.ivMiscellaneous);
         ivSewerageComplaint = findViewById(R.id.ivSewerageComplaint);
+        ivBack = findViewById(R.id.ivBack);
 
         llCow = findViewById(R.id.llCow);
         llSewerage = findViewById(R.id.llSewerage);
@@ -67,6 +68,7 @@ public class OthersActivity extends AppCompatActivity {
         llTradeLicense = findViewById(R.id.llTradeLicense);
         llOutsourcing = findViewById(R.id.llOutsourcing);
         llEncrochment = findViewById(R.id.llEncrochment);
+        llSewerageComplaint = findViewById(R.id.llSewerageComplaint);
 
         tvDog = findViewById(R.id.tvDog);
         tvUdyaan = findViewById(R.id.tvUdyaan);
@@ -75,7 +77,6 @@ public class OthersActivity extends AppCompatActivity {
         tvPension = findViewById(R.id.tvPension);
         tvAds = findViewById(R.id.tvAds);
         tvMiscellaneous = findViewById(R.id.tvMiscellaneous);
-        tvSewerageComplaint = findViewById(R.id.tvSewerageComplaint);
 
         StringBuilder cowBuilder = new StringBuilder();
         StringBuilder sewerageBuilder = new StringBuilder();
@@ -88,6 +89,14 @@ public class OthersActivity extends AppCompatActivity {
         StringBuilder tradelicenseBuilder = new StringBuilder();
         StringBuilder outsourcingBuilder = new StringBuilder();
         StringBuilder encrochmentBuilder = new StringBuilder();
+        StringBuilder sewerageComplaintBuilder = new StringBuilder();
+
+        ivBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(OthersActivity.this, HomeActivity.class));
+            }
+        });
 
         ivDog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -395,13 +404,21 @@ public class OthersActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        for (int i = 0; i < llSewerageComplaint.getChildCount(); i++) {
+            View child = llSewerageComplaint.getChildAt(i);
+            if (child instanceof TextView) {
+                TextView textView = (TextView) child;
+                sewerageComplaintBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
         ivSewerageComplaint.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View v) {
-                String seweragecomplainttxt = tvSewerageComplaint.getText().toString();
+                String sewerageComplainttxt = sewerageComplaintBuilder.toString();
                 Intent i = new Intent(OthersActivity.this, DetailsActivity.class);
                 i.putExtra("requestCode",26);
-                i.putExtra("titleTwentySixth", seweragecomplainttxt);
+                i.putExtra("titleTwentySixth", sewerageComplainttxt);
                 startActivity(i);
             }
         });

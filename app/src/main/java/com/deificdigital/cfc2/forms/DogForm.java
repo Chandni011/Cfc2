@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +14,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.deificdigital.cfc2.R;
+import com.deificdigital.cfc2.adapters.CustomSpinnerAdapter;
 
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 public class DogForm extends AppCompatActivity {
 
@@ -27,6 +31,23 @@ public class DogForm extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_dog_form);
+
+        Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
+        Spinner genderSpinner = findViewById(R.id.spinnerGender);
+        Spinner vaccinatedSpinner = findViewById(R.id.spinnerVaccinated);
+
+        List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Dog));
+        CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
+        criteriaSpinner.setAdapter(criteriaAdapter);
+
+        List<String> genderItems = Arrays.asList(getResources().getStringArray(R.array.gender));
+        CustomSpinnerAdapter genderAdapter = new CustomSpinnerAdapter(this, genderItems);
+        genderSpinner.setAdapter(genderAdapter);
+
+        List<String> vaccinatedItems = Arrays.asList(getResources().getStringArray(R.array.Dog_Vaccinated));
+        CustomSpinnerAdapter vaccinatedAdapter = new CustomSpinnerAdapter(this, vaccinatedItems);
+        vaccinatedSpinner.setAdapter(vaccinatedAdapter);
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

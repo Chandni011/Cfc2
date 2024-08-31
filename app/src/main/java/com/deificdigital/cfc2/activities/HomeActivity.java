@@ -1,11 +1,14 @@
 package com.deificdigital.cfc2.activities;
 
+import static java.security.AccessController.getContext;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -18,6 +21,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.deificdigital.cfc2.R;
+import com.deificdigital.cfc2.activities.DetailsActivity;
+import com.deificdigital.cfc2.activities.NotificationActivity;
+import com.deificdigital.cfc2.activities.OthersActivity;
 import com.deificdigital.cfc2.fragments.HomeFragment;
 import com.deificdigital.cfc2.fragments.MyServicesFragment;
 import com.deificdigital.cfc2.fragments.NotificationFragment;
@@ -27,11 +33,15 @@ import com.google.android.material.navigation.NavigationView;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private LinearLayout myLinaerLayout;
     ImageView ivNotification;
 
     private DrawerLayout drawerLayout;
     private ImageView hamburgerIcon;
+
+    ImageView birth, trade, house, death, mutation, garbage, water, other;
+    TextView tvmutation, tvothers;
+    LinearLayout llbirth, lltrade, llhouse, lldeath, llgarbage, llwater;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +49,31 @@ public class HomeActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
 
-        myLinaerLayout = findViewById(R.id.llActionBar);
+        birth = findViewById(R.id.ivBirthLogo);
+        trade = findViewById(R.id.ivTradeTaxLogo);
+        house = findViewById(R.id.ivHouseTaxLogo);
+        death = findViewById(R.id.ivDeathLogo);
+        mutation = findViewById(R.id.ivMutation);
+        garbage = findViewById(R.id.ivGarbageLogo);
+        water = findViewById(R.id.ivWaterLogo);
+        other = findViewById(R.id.ivOthersLogo);
+        llbirth = findViewById(R.id.llBirthCertificate);
+        lltrade = findViewById(R.id.llTradeTax);
+        llhouse = findViewById(R.id.llHouseTax);
+        lldeath = findViewById(R.id.llDeath);
+        llgarbage = findViewById(R.id.llGarbage);
+        llwater = findViewById(R.id.llWater);
+        tvothers = findViewById(R.id.tvOthers);
+        tvmutation = findViewById(R.id.tvMutation);
+
         ivNotification = findViewById(R.id.ivNotification);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         hamburgerIcon = findViewById(R.id.hamburger_icon);
 
-        // Set OnClickListener to open the drawer when ImageView is clicked
         hamburgerIcon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(HomeActivity.this, "ImageView clicked", Toast.LENGTH_SHORT).show();
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
@@ -58,38 +82,24 @@ public class HomeActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
-                // Handle the navigation item clicks here
-                // ...
-
-                // Close the drawer when an item is clicked
+                int id = item.getItemId();
+                if (id == R.id.nav_dashboard){
+                    loadFrag(new HomeFragment(), false);
+                } else if (id == R.id.nav_account){
+                    loadFrag(new ProfileFragment(), false);
+                } else if (id == R.id.nav_services) {
+                    loadFrag(new MyServicesFragment(), false);
+                } else if (id == R.id.nav_notifications) {
+                    loadFrag(new NotificationFragment(), false);
+                }
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
             }
         });
 
-//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-//            return insets;
-//        });
-
         ivNotification.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // Create a new instance of NotificationFragment
-                NotificationFragment notificationFragment = new NotificationFragment();
-
-                // Use FragmentManager to replace the current fragment
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.fragment_container, notificationFragment) // Replace the container with the new fragment
-                        .addToBackStack(null) // Add to back stack if you want to allow the user to navigate back
-                        .commit();
-            }
-        });
-
-        ivNotification.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent i = new Intent(HomeActivity.this, NotificationActivity.class);
                 startActivity(i);
                 // Optionally call finish() if you want to close HomeActivity
@@ -97,6 +107,171 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+        StringBuilder BirthBuilder = new StringBuilder();
+        StringBuilder TradeBuilder = new StringBuilder();
+        StringBuilder HouseBuilder = new StringBuilder();
+        StringBuilder DeathBuilder = new StringBuilder();
+        StringBuilder GarbageBuilder = new StringBuilder();
+        StringBuilder WaterBuilder = new StringBuilder();
+
+// Iterate through all child views of the LinearLayout
+        for (int i = 0; i < llbirth.getChildCount(); i++) {
+            View child = llbirth.getChildAt(i);
+            if (child instanceof TextView) {
+                TextView textView = (TextView) child;
+                BirthBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
+        birth.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                String birthtxt = BirthBuilder.toString();
+                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+                i.putExtra("requestCode",1);
+                i.putExtra("titleFirst", birthtxt);
+                startActivity(i);
+            }
+        });
+
+        for (int i = 0; i < lltrade.getChildCount(); i++) {
+            View child = lltrade.getChildAt(i);
+            if (child instanceof TextView) {
+                TextView textView = (TextView) child;
+                TradeBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
+        trade.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                String tradetxt = TradeBuilder.toString();
+                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+                i.putExtra("requestCode",2);
+                i.putExtra("titleSecond", tradetxt);
+                startActivity(i);
+            }
+        });
+
+        for (int i = 0; i < llhouse.getChildCount(); i++) {
+            View child = llhouse.getChildAt(i);
+            if (child instanceof TextView) {
+                TextView textView = (TextView) child;
+                String text = textView.getText().toString();
+
+                // Customize how you want to format the text
+                if (i == 1) {
+                    // For the first TextView, put text on the first line
+                    HouseBuilder.append(text).append("\n");
+                } else {
+                    // For other TextViews, put text on the next line
+                    HouseBuilder.append(" ").append(text);
+                }
+            }
+        }
+        house.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                String housetxt = HouseBuilder.toString();
+                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+                i.putExtra("requestCode",3);
+                i.putExtra("titleThird",housetxt);
+                startActivity(i);
+            }
+        });
+
+        for (int i = 0; i < lldeath.getChildCount(); i++) {
+            View child = lldeath.getChildAt(i);
+            if (child instanceof TextView) {
+                TextView textView = (TextView) child;
+                DeathBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
+        death.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                String deathtxt = DeathBuilder.toString();
+                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+                i.putExtra("requestCode",4);
+                i.putExtra("titleFourth", deathtxt);
+                startActivity(i);
+            }
+        });
+
+        mutation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String mutationtxt = tvmutation.getText().toString();
+                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+                i.putExtra("requestCode",5);
+                i.putExtra("titleFifth", mutationtxt);
+                startActivity(i);
+            }
+        });
+
+        for (int i = 0; i < llgarbage.getChildCount(); i++) {
+            View child = llgarbage.getChildAt(i);
+            if (child instanceof TextView) {
+                TextView textView = (TextView) child;
+                String text = textView.getText().toString();
+
+                // Customize how you want to format the text
+                if (i == 1) {
+                    // For the first TextView, put text on the first line
+                    GarbageBuilder.append(text).append("\n");
+                } else {
+                    // For other TextViews, put text on the next line
+                    GarbageBuilder.append(" ").append(text);
+                }
+            }
+        }
+        garbage.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                String garbagetxt = GarbageBuilder.toString();
+                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+                i.putExtra("requestCode",6);
+                i.putExtra("titleSixth", garbagetxt);
+                startActivity(i);
+            }
+        });
+
+        for (int i = 0; i < llwater.getChildCount(); i++) {
+            View child = llwater.getChildAt(i);
+            if (child instanceof TextView) {
+                TextView textView = (TextView) child;
+                WaterBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
+        water.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                String watertxt = WaterBuilder.toString();
+                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+                i.putExtra("requestCode",7);
+                i.putExtra("titleSeventh", watertxt);
+                startActivity(i);
+            }
+        });
+
+        other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(HomeActivity.this, OthersActivity.class);
+                startActivity(i);
+            }
+        });
+        // Set OnClickListener to open the drawer when ImageView is clicked
+
+//        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+//            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+//            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+//            return insets;
+//        });
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_nav);
 
@@ -129,9 +304,10 @@ public class HomeActivity extends AppCompatActivity {
         }
         ft.commit();
     }
-    public void setLinearLayoutVisibility(boolean visible) {
-        if (myLinaerLayout != null) {
-            myLinaerLayout.setVisibility(visible ? View.VISIBLE : View.GONE);
+
+    public void setDrawerLayoutVisibility(boolean visible) {
+        if (drawerLayout != null) {
+            drawerLayout.setVisibility(visible ? View.VISIBLE : View.GONE);
         }
     }
 }

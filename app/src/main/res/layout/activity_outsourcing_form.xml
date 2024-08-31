@@ -20,8 +20,9 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_medium"
             android:text="Outsourcing Employees Related \nComplaints (Karmik)"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -45,7 +46,8 @@
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/poppins_medium"
                         android:text="Title"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -65,7 +67,9 @@
                     android:background="@drawable/edittext_bg"
                     android:hint="Enter title"
                     android:paddingLeft="10dp"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:inputType="textCapSentences"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -79,7 +83,8 @@
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/poppins_medium"
                         android:text="Select Area"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -103,7 +108,8 @@
                         android:layout_marginRight="10dp"
                         android:background="@drawable/edittext_bg"
                         android:spinnerMode="dropdown"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:popupBackground="@color/white"/>
 
                     <ImageView
                         android:id="@+id/ivdrop"
@@ -138,7 +144,8 @@
                                 android:layout_marginTop="15dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:text="Zone"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -161,7 +168,8 @@
                                 android:background="@drawable/edittext_bg"
                                 android:hint="Enter zone"
                                 android:paddingLeft="10dp"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"
+                                android:textColor="@color/black"/>
 
                         </RelativeLayout>
 
@@ -184,7 +192,8 @@
                                 android:layout_marginTop="15dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:text="Pincode"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -208,7 +217,8 @@
                                 android:background="@drawable/edittext_bg"
                                 android:hint="Enter pincode"
                                 android:padding="10dp"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"
+                                android:textColor="@color/black"/>
 
                         </RelativeLayout>
 
@@ -238,7 +248,8 @@
                                 android:layout_marginTop="15dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:text="Ward"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -261,7 +272,8 @@
                                 android:background="@drawable/edittext_bg"
                                 android:hint="Enter ward"
                                 android:paddingLeft="10dp"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"
+                                android:textColor="@color/black"/>
 
                         </RelativeLayout>
 
@@ -284,7 +296,8 @@
                                 android:layout_marginTop="15dp"
                                 android:fontFamily="@font/poppins_medium"
                                 android:text="Block"
-                                android:textStyle="bold" />
+                                android:textStyle="bold"
+                                android:textColor="@color/black"/>
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -308,7 +321,8 @@
                                 android:background="@drawable/edittext_bg"
                                 android:hint="Enter block"
                                 android:padding="10dp"
-                                android:textSize="15sp" />
+                                android:textSize="15sp"
+                                android:textColor="@color/black"/>
 
                         </RelativeLayout>
 
@@ -328,7 +342,8 @@
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/poppins_medium"
                         android:text="Choose Criteria"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -353,7 +368,8 @@
                         android:background="@drawable/edittext_bg"
                         android:entries="@array/Criteria_Outsourcing"
                         android:spinnerMode="dropdown"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:popupBackground="@color/white"/>
 
                     <ImageView
                         android:id="@+id/tvCriteria"
@@ -374,7 +390,8 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Choose Document to upload"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -388,7 +405,8 @@
                         android:layout_marginTop="15dp"
                         android:fontFamily="@font/poppins_medium"
                         android:text="Description"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textColor="@color/black"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -410,7 +428,9 @@
                     android:hint="Write here...."
                     android:paddingLeft="10dp"
                     android:paddingBottom="165dp"
-                    android:textSize="15sp" />
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:inputType="textCapSentences"/>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btnSubmit"

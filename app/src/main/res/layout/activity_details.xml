@@ -5,9 +5,11 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.DetailsActivity">
+    tools:context=".activities.DetailsActivity"
+    android:background="@color/white">
 
     <ImageView
+        android:id="@+id/ivBack"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
@@ -24,10 +26,12 @@
         android:text="Title"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -67,13 +71,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Apply Now"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Start a new request" />
+                android:text="Start a new request"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="12sp"
+                android:layout_marginTop="-8dp"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
@@ -111,7 +121,7 @@
             android:src="@drawable/track"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <LinearLayout
             android:id="@+id/trackTv"
@@ -127,13 +137,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Track Status"
-                android:textSize="20dp"
-                android:textStyle="bold" />
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
                 android:layout_height="wrap_content"
-                android:text="Know your request status"/>
+                android:text="Know your request status"
+                android:layout_marginTop="-8dp"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
@@ -146,7 +162,73 @@
             app:layout_constraintHorizontal_bias="0.875"
             app:layout_constraintStart_toEndOf="@id/trackTv"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.542" />
+            app:layout_constraintVertical_bias="0.542"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/llHomeServices"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/button_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llTrackStatus">
+
+        <ImageView
+            android:id="@+id/homeImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/home_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/homeTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/homeImage"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home Service"
+                android:textSize="20sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_height="wrap_content"
+                android:text="Apply for home service"
+                android:layout_marginTop="-8dp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.875"
+            app:layout_constraintStart_toEndOf="@id/trackTv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.542"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

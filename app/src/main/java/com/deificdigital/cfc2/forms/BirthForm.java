@@ -16,8 +16,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.deificdigital.cfc2.R;
+import com.deificdigital.cfc2.adapters.CustomSpinnerAdapter;
 
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 public class BirthForm extends AppCompatActivity {
 
@@ -32,15 +35,35 @@ public class BirthForm extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_birth_form);
         Spinner relationSpinner = findViewById(R.id.spinnerRelation);
+        Spinner genderSpinner = findViewById(R.id.spinnerGender);
+        Spinner religionSpinner = findViewById(R.id.spinnerReligion);
+        Spinner assistanceSpinner = findViewById(R.id.spinnerAssistance);
+        Spinner deliverySpinner =  findViewById(R.id.spinnerDelivery);
+        Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.relation, android.R.layout.simple_spinner_item);
+        List<String> relationItems = Arrays.asList(getResources().getStringArray(R.array.relation));
+        CustomSpinnerAdapter relationAdapter = new CustomSpinnerAdapter(this, relationItems);
+        relationSpinner.setAdapter(relationAdapter);
 
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        List<String> genderItems = Arrays.asList(getResources().getStringArray(R.array.gender));
+        CustomSpinnerAdapter genderAdapter = new CustomSpinnerAdapter(this, genderItems);
+        genderSpinner.setAdapter(genderAdapter);
 
-        // Apply the adapter to the spinner
-        relationSpinner.setAdapter(adapter);
+        List<String> religionItems = Arrays.asList(getResources().getStringArray(R.array.relation));
+        CustomSpinnerAdapter religionAdapter = new CustomSpinnerAdapter(this, religionItems);
+        religionSpinner.setAdapter(religionAdapter);
+
+        List<String> AssistanceItems = Arrays.asList(getResources().getStringArray(R.array.assistance));
+        CustomSpinnerAdapter assistanceAdapter = new CustomSpinnerAdapter(this, AssistanceItems);
+        assistanceSpinner.setAdapter(assistanceAdapter);
+
+        List<String> DeliveryItems = Arrays.asList(getResources().getStringArray(R.array.Procedure_of_Delivery));
+        CustomSpinnerAdapter deliveryAdapter = new CustomSpinnerAdapter(this, DeliveryItems);
+        deliverySpinner.setAdapter(deliveryAdapter);
+
+        List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Birth));
+        CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
+        criteriaSpinner.setAdapter(criteriaAdapter);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

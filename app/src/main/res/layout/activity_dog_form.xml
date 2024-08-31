@@ -15,9 +15,10 @@
         android:layout_height="wrap_content"
         android:text="Dog Registration"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +42,8 @@
                     android:text="Choose Criteria"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -66,7 +68,8 @@
                     android:layout_marginRight="10dp"
                     android:spinnerMode="dropdown"
                     android:entries="@array/Criteria_Dog"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/tvCriteria"
@@ -91,7 +94,8 @@
                     android:text="Dog Breed Name"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,7 +115,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter Dog Breed"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -125,7 +131,8 @@
                     android:text="Gender"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -150,7 +157,8 @@
                     android:layout_marginTop="10dp"
                     android:spinnerMode="dropdown"
                     android:textSize="15sp"
-                    android:entries="@array/gender"/>
+                    android:entries="@array/gender"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -174,7 +182,8 @@
                     android:text="Owner Name"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -194,7 +203,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter Owner Name"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -208,7 +219,8 @@
                     android:text="Dog Age (in month)"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -229,7 +241,8 @@
                 android:layout_marginRight="10dp"
                 android:hint="Enter Dog Age (in month)"
                 android:paddingLeft="10dp"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -243,7 +256,8 @@
                     android:text="Buy Date"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -268,7 +282,11 @@
                     android:background="@drawable/edittext_bg"
                     android:hint="DD-MM-YYYY"
                     android:textSize="15sp"
-                    android:paddingLeft="10dp"/>
+                    android:focusable="false"
+                    android:clickable="false"
+                    android:ems="8"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"/>
 
                 <ImageView
                     android:id="@+id/tvDate"
@@ -293,7 +311,8 @@
                     android:text="Last Year's License Number"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -314,7 +333,8 @@
                 android:layout_marginRight="10dp"
                 android:hint="Enter Last Year's License Number"
                 android:paddingLeft="10dp"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -328,7 +348,8 @@
                     android:text="Year for which license is to be obtained/Have \nto upgrade"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -349,7 +370,9 @@
                 android:layout_marginRight="10dp"
                 android:hint="Enter Year to which license is to be obtained/Have to upgrade"
                 android:paddingLeft="10dp"
-                android:inputType="number"/>
+                android:inputType="number"
+                android:ems="4"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -363,7 +386,8 @@
                     android:text="Vaccinated"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -388,7 +412,8 @@
                     android:layout_marginTop="10dp"
                     android:spinnerMode="dropdown"
                     android:textSize="15sp"
-                    android:entries="@array/Dog_Vaccinated"/>
+                    android:entries="@array/Dog_Vaccinated"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -412,7 +437,8 @@
                     android:text="Select Area"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -436,7 +462,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:textSize="15sp"
-                    android:spinnerMode="dropdown"/>
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/ivdrop"
@@ -461,7 +488,8 @@
                     android:text="Zone"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -481,7 +509,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter Zone"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:id="@+id/tvChooseDocument"
@@ -491,7 +521,8 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -505,7 +536,8 @@
                     android:text="Description"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -527,7 +559,9 @@
                 android:paddingBottom="165dp"
                 android:hint="Write here...."
                 android:paddingLeft="10dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSubmit"

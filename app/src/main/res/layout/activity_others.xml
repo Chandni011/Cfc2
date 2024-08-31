@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.OthersActivity">
+    tools:context=".activities.OthersActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,6 +15,7 @@
         android:gravity="center">
 
         <ImageView
+            android:id="@+id/ivBack"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_back"
@@ -23,8 +25,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Other Services"
+            android:fontFamily="@font/poppins_medium"
             android:textStyle="bold"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
@@ -32,18 +36,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="100dp"
+        android:background="@color/white">
 
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:background="@color/white">
 
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:columnCount="3"
-                android:rowCount="7">
+                android:rowCount="7"
+                android:background="@color/white">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -67,7 +74,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Dog Registration"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/poppins_medium"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -99,14 +109,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Cattle Catching"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Abhiyan"
-                            android:textStyle="bold"/>
+                            android:fontFamily="@font/poppins_medium"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -127,14 +143,17 @@
                         android:background="@drawable/image_bg"
                         android:layout_margin="15dp"
                         android:padding="5dp"
-                        android:src="@drawable/udyaan" />
+                        android:src="@drawable/udyaan"/>
 
                     <TextView
                         android:id="@+id/tvUdyaan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Udyaan Vibhag"
-                        android:textStyle="bold"/>
+                        android:fontFamily="@font/poppins_medium"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -166,21 +185,29 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sewerage/water"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text=" Connection "
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Maintenance"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -214,14 +241,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sewerage Tax"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Mutation"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/poppins_medium"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
 
                     </LinearLayout>
@@ -251,7 +284,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="-5dp"
                         android:text="Civil Work"
-                        android:textStyle="bold" />
+                        android:fontFamily="@font/poppins_medium"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -283,14 +319,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Sewerage/water"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Assessment"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/poppins_medium"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -324,14 +366,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Water Tax"
-                            android:textStyle="bold" />
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Assessment"
-                            android:textStyle="bold" />
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -365,14 +413,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Water Tax"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Mutation"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -401,7 +455,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="C.E Lightning"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -433,21 +490,30 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="House Tax "
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Assessment"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/poppins_medium"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="(Renewal)"
-                            android:textStyle="bold"/>
+                            android:fontFamily="@font/poppins_medium"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -481,21 +547,30 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Booking of lawn,"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text=" bharat shala,"
-                            android:textStyle="bold" />
+                            android:fontFamily="@font/poppins_medium"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="ghats"
-                            android:textStyle="bold"/>
+                            android:fontFamily="@font/poppins_medium"
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -523,7 +598,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Pension Service"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -555,21 +633,30 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Trade License"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text=" (Central Tax"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Office)"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -597,7 +684,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textStyle="bold"
-                        android:text="Advertisement"/>
+                        android:text="Advertisement"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -629,28 +719,50 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Outsourcing"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
-                            android:text=" Employees Related"
-                            android:textStyle="bold" />
+                            android:text=" Employees"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-5dp"
+                            android:text="Related"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Complaints"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="(Karmik)"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -684,14 +796,20 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Encrochment/"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="-5dp"
                             android:text="Enforcement"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
 
                     </LinearLayout>
 
@@ -720,7 +838,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:text="Miscellaneous"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"/>
 
                 </LinearLayout>
 
@@ -741,13 +862,33 @@
                         android:padding="5dp"
                         android:src="@drawable/water_tax"/>
 
-                    <TextView
-                        android:id="@+id/tvSewerageComplaint"
+                    <LinearLayout
+                        android:id="@+id/llSewerageComplaint"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="Sewerage Complaint"
-                        android:textStyle="bold"/>
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sewerage"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-5dp"
+                            android:text="Complaint"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppins_medium"
+                            android:textSize="12sp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 

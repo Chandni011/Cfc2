@@ -16,8 +16,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.deificdigital.cfc2.R;
+import com.deificdigital.cfc2.adapters.CustomSpinnerAdapter;
 
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 public class DeathForm extends AppCompatActivity {
 
@@ -33,15 +36,30 @@ public class DeathForm extends AppCompatActivity {
         setContentView(R.layout.activity_death_form);
 
         Spinner relationSpinner = findViewById(R.id.spinnerRelation);
+        Spinner genderSpinner = findViewById(R.id.spinnerGender);
+        Spinner religionSpinner = findViewById(R.id.spinnerReligion);
+        Spinner deathPlaceSpinner = findViewById(R.id.spinnerDeathPlace);
+        Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.relation, android.R.layout.simple_spinner_item);
+        List<String> relationItems = Arrays.asList(getResources().getStringArray(R.array.Deceased_Relation));
+        CustomSpinnerAdapter relationAdapter = new CustomSpinnerAdapter(this, relationItems);
+        relationSpinner.setAdapter(relationAdapter);
 
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        List<String> genderItems = Arrays.asList(getResources().getStringArray(R.array.gender));
+        CustomSpinnerAdapter genderAdapter = new CustomSpinnerAdapter(this, genderItems);
+        genderSpinner.setAdapter(genderAdapter);
 
-        // Apply the adapter to the spinner
-        relationSpinner.setAdapter(adapter);
+        List<String> ReligionItems = Arrays.asList(getResources().getStringArray(R.array.religion));
+        CustomSpinnerAdapter religionAdapter = new CustomSpinnerAdapter(this, ReligionItems);
+        religionSpinner.setAdapter(religionAdapter);
+
+        List<String> DeathPlaceItems = Arrays.asList(getResources().getStringArray(R.array.Death_Place));
+        CustomSpinnerAdapter deathPlaceAdapter = new CustomSpinnerAdapter(this, DeathPlaceItems);
+        deathPlaceSpinner.setAdapter(deathPlaceAdapter);
+
+        List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Death));
+        CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
+        criteriaSpinner.setAdapter(criteriaAdapter);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

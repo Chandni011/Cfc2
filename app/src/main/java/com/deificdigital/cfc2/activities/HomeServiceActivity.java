@@ -1,7 +1,14 @@
-package com.deificdigital.cfc2.forms;
+package com.deificdigital.cfc2.activities;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Spinner;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.RelativeSizeSpan;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,24 +17,15 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.deificdigital.cfc2.R;
-import com.deificdigital.cfc2.adapters.CustomSpinnerAdapter;
 
-import java.util.Arrays;
-import java.util.List;
+public class HomeServiceActivity extends AppCompatActivity {
 
-public class OutsourcingForm extends AppCompatActivity {
-
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_outsourcing_form);
-
-        Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
-
-        List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Outsourcing));
-        CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
-        criteriaSpinner.setAdapter(criteriaAdapter);
+        setContentView(R.layout.activity_home_service);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

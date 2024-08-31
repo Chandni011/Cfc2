@@ -2,6 +2,8 @@ package com.deificdigital.cfc2.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,6 +12,8 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.deificdigital.cfc2.R;
 import com.deificdigital.cfc2.forms.AdvertisementForm;
@@ -38,11 +42,13 @@ import com.deificdigital.cfc2.forms.UdyanForm;
 import com.deificdigital.cfc2.forms.WaterAssessmentForm;
 import com.deificdigital.cfc2.forms.WaterComplaintForm;
 import com.deificdigital.cfc2.forms.WaterMutationForm;
+import com.deificdigital.cfc2.fragments.MyServicesFragment;
 
 public class DetailsActivity extends AppCompatActivity {
 
     TextView title;
-    ConstraintLayout llApplyNow;
+    ConstraintLayout llApplyNow, llTrackStatus, llHomeServices;
+    ImageView back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +62,30 @@ public class DetailsActivity extends AppCompatActivity {
         });
         title = findViewById(R.id.title);
         llApplyNow = findViewById(R.id.llApplyNow);
+        llTrackStatus = findViewById(R.id.llTrackStatus);
+        llHomeServices = findViewById(R.id.llHomeServices);
+        back = findViewById(R.id.ivBack);
 
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailsActivity.this, HomeActivity.class));
+            }
+        });
+
+        llTrackStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailsActivity.this, ServiceActivity.class));
+            }
+        });
+
+        llHomeServices.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DetailsActivity.this, HomeServiceActivity.class));
+            }
+        });
 
         Intent i = getIntent();
         String birthtitle = i.getStringExtra("titleFirst");
@@ -114,6 +143,23 @@ public class DetailsActivity extends AppCompatActivity {
         int reqCodeTwentyFourth = i.getIntExtra("requestCode", 0);
         int reqCodeTwentyFifth = i.getIntExtra("requestCode", 0);
         int reqCodeTwentySixth = i.getIntExtra("requestCode", 0);
+
+//        llTrackStatus.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MyServicesFragment myServicesFragment = new MyServicesFragment();
+//                replaceFragment(myServicesFragment);
+//            }
+//
+//            private void replaceFragment(MyServicesFragment myServicesFragment) {
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.replace(R.id.fragment_container, myServicesFragment);
+//                fragmentTransaction.addToBackStack(null); // Optional: add to backstack to enable back navigation
+//                fragmentTransaction.commit();
+//            }
+//        });
+
 
         if (reqCodeFirst == 1){
             title.setText(birthtitle);

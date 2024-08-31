@@ -1,7 +1,6 @@
-package com.deificdigital.cfc2.forms;
+package com.deificdigital.cfc2.activities;
 
 import android.os.Bundle;
-import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,24 +9,22 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.deificdigital.cfc2.R;
-import com.deificdigital.cfc2.adapters.CustomSpinnerAdapter;
+import com.deificdigital.cfc2.fragments.MyServicesFragment;
+import com.deificdigital.cfc2.fragments.NotificationFragment;
 
-import java.util.Arrays;
-import java.util.List;
-
-public class OutsourcingForm extends AppCompatActivity {
+public class ServiceActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_outsourcing_form);
+        setContentView(R.layout.activity_service);
 
-        Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
-
-        List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Outsourcing));
-        CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
-        criteriaSpinner.setAdapter(criteriaAdapter);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, new MyServicesFragment())
+                    .commit();
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

@@ -7,9 +7,10 @@
     tools:context=".fragments.ProfileFragment">
 
     <ImageView
+        android:id="@+id/ivBack"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,14 +20,16 @@
         android:id="@+id/tvProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="26dp"
         android:text="Profile"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/tvName"
@@ -35,9 +38,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="24dp"
         android:text="Name"
+        android:fontFamily="@font/poppins_medium"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvProfile"/>
+        app:layout_constraintTop_toBottomOf="@id/tvProfile"
+        android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etName"
@@ -61,9 +66,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="24dp"
         android:text="Mobile Number"
+        android:fontFamily="@font/poppins_medium"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etName"/>
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etNumber"
@@ -88,8 +95,10 @@
         android:layout_marginTop="24dp"
         android:text="Email"
         android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etNumber"/>
+        app:layout_constraintTop_toBottomOf="@id/etNumber"
+        android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etEmail"
@@ -114,8 +123,10 @@
         android:layout_marginTop="24dp"
         android:text="Address"
         android:textStyle="bold"
+        android:fontFamily="@font/poppins_medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etEmail"/>
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        android:textColor="@color/black"/>
 
         <EditText
             android:id="@+id/etAddress"

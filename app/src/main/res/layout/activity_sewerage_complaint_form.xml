@@ -14,9 +14,10 @@
         android:layout_height="wrap_content"
         android:text="Sewer Complaint"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -40,7 +41,8 @@
                     android:text="Title"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -60,7 +62,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter title"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -74,7 +78,8 @@
                     android:text="Select Area"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -98,7 +103,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:textSize="15sp"
-                    android:spinnerMode="dropdown"/>
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/ivdrop"
@@ -133,7 +139,8 @@
                             android:text="Zone"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -156,7 +163,8 @@
                             android:background="@drawable/edittext_bg"
                             android:hint="Enter zone"
                             android:textSize="15sp"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -179,7 +187,8 @@
                             android:text="Pincode"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -203,7 +212,8 @@
                             android:textSize="15sp"
                             android:background="@drawable/edittext_bg"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"/>
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -233,7 +243,8 @@
                             android:text="Ward"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -256,7 +267,8 @@
                             android:background="@drawable/edittext_bg"
                             android:hint="Enter ward"
                             android:textSize="15sp"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -279,7 +291,8 @@
                             android:text="Block"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -303,7 +316,8 @@
                             android:textSize="15sp"
                             android:background="@drawable/edittext_bg"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"/>
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -323,7 +337,8 @@
                     android:text="Choose Criteria"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -348,7 +363,8 @@
                     android:layout_marginRight="10dp"
                     android:spinnerMode="dropdown"
                     android:entries="@array/Criteria_SewerComplaint"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/tvCriteria"
@@ -369,7 +385,8 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -383,7 +400,8 @@
                     android:text="Description"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -405,7 +423,9 @@
                 android:paddingBottom="165dp"
                 android:hint="Write here...."
                 android:paddingLeft="10dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSubmit"

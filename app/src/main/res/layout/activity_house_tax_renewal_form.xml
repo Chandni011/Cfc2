@@ -15,9 +15,10 @@
         android:layout_height="wrap_content"
         android:text="House Tax Assessment (Renewal)"
         android:textStyle="bold"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/black"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -41,7 +42,8 @@
                     android:text="Enter Property Id"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -66,7 +68,9 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:hint="Enter Property Id"
-                    android:paddingLeft="10dp"/>
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/black"
+                    android:inputType="textCapSentences"/>
 
                 <TextView
                     android:id="@+id/tvSearch"
@@ -88,7 +92,8 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="Zone"
                 android:textStyle="bold"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -99,7 +104,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter Zone"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -108,7 +115,8 @@
                 android:text="Property Type"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -119,7 +127,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter property type"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -128,7 +138,8 @@
                 android:text="Ward no"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -139,7 +150,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter ward no"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -148,7 +161,8 @@
                 android:text="Ward"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -159,7 +173,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter ward"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -168,7 +184,8 @@
                 android:text="Mohalla"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -179,7 +196,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter mohalla"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -188,7 +207,8 @@
                 android:text="Check no"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -199,7 +219,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter check no"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -208,7 +230,8 @@
                 android:text="Owner name"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -219,7 +242,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter owner name"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -228,7 +253,8 @@
                 android:text="Father name"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -239,7 +265,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter father name"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -248,7 +276,8 @@
                 android:text="Address"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -259,7 +288,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter address"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -268,7 +299,8 @@
                 android:text="Mobile no"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -279,7 +311,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter mobile no"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="number"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -288,7 +322,8 @@
                 android:text="Total Area"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -299,7 +334,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter total area"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -308,7 +345,8 @@
                 android:text="arv"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -319,7 +357,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter arv"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -328,7 +367,8 @@
                 android:text="Current Tax"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -339,7 +379,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter current tax"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -348,7 +389,8 @@
                 android:text="Arrear"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -359,7 +401,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter arrear"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -368,7 +411,8 @@
                 android:text="Interest"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -379,7 +423,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter interest"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -388,7 +433,8 @@
                 android:text="Due Amount"
                 android:textStyle="bold"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -399,7 +445,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter due amount"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -413,7 +460,8 @@
                     android:text="Select Area"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -437,7 +485,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:textSize="15sp"
-                    android:spinnerMode="dropdown"/>
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/ivdrop"
@@ -472,7 +521,8 @@
                             android:text="Zone"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -495,7 +545,8 @@
                             android:background="@drawable/edittext_bg"
                             android:hint="Enter zone"
                             android:textSize="15sp"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -518,7 +569,8 @@
                             android:text="Pincode"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -542,7 +594,8 @@
                             android:textSize="15sp"
                             android:background="@drawable/edittext_bg"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"/>
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -572,7 +625,8 @@
                             android:text="Ward"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -595,7 +649,8 @@
                             android:background="@drawable/edittext_bg"
                             android:hint="Enter ward"
                             android:textSize="15sp"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -618,7 +673,8 @@
                             android:text="Block"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -642,7 +698,8 @@
                             android:textSize="15sp"
                             android:background="@drawable/edittext_bg"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"/>
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -662,7 +719,8 @@
                     android:text="Choose Criteria"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -687,7 +745,8 @@
                     android:layout_marginRight="10dp"
                     android:spinnerMode="dropdown"
                     android:entries="@array/Criteria_HouseTaxRenewal"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/tvCriteria"
@@ -708,7 +767,8 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -722,7 +782,8 @@
                     android:text="Description"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -744,7 +805,9 @@
                 android:paddingBottom="165dp"
                 android:hint="Write here...."
                 android:paddingLeft="10dp"
-                android:textSize="15sp"/>
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSubmit"

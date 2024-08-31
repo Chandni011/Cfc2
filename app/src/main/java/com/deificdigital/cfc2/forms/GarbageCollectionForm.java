@@ -11,10 +11,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.deificdigital.cfc2.R;
+import com.deificdigital.cfc2.adapters.CustomSpinnerAdapter;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class GarbageCollectionForm extends AppCompatActivity {
-
-    Spinner spinnerCriteria;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +24,11 @@ public class GarbageCollectionForm extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_garbage_collection_form);
 
-        spinnerCriteria = findViewById(R.id.spinnerCriteria);
+        Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
+
+        List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Garbage_Collection));
+        CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
+        criteriaSpinner.setAdapter(criteriaAdapter);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -34,10 +40,6 @@ public class GarbageCollectionForm extends AppCompatActivity {
         for (int i = 0; i < criteriaArray.length; i++) {
             criteriaArray[i] = criteriaArray[i].replace(" Complaint/", "\nComplaint/");
         }
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, criteriaArray);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerCriteria.setAdapter(adapter);
 
     }
 }

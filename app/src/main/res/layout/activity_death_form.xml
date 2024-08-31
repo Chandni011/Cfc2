@@ -20,8 +20,9 @@
             android:layout_height="wrap_content"
             android:text="Death Certificate"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"/>
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
 
@@ -43,7 +44,8 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -57,7 +59,8 @@
                     android:text="Name of Deceased"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -76,8 +79,10 @@
                 android:textSize="15sp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:hint="Enter Applicant/Child Name"
-                android:paddingLeft="10dp"/>
+                android:hint="Enter Applicant Name"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -91,7 +96,8 @@
                     android:text="Relation with Deceased"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -116,7 +122,8 @@
                     android:layout_marginTop="10dp"
                     android:spinnerMode="dropdown"
                     android:textSize="15sp"
-                    android:entries="@array/Deceased_Relation"/>
+                    android:entries="@array/Deceased_Relation"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -150,7 +157,8 @@
                             android:text="Date of birth"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -176,7 +184,10 @@
                             android:textSize="15sp"
                             android:paddingLeft="10dp"
                             android:inputType="date"
-                            android:ems="8"/>
+                            android:focusable="false"
+                            android:clickable="false"
+                            android:ems="8"
+                            android:textColor="@color/black"/>
 
                         <ImageView
                             android:id="@+id/tvDate"
@@ -208,7 +219,8 @@
                             android:text="Child Gender"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -233,7 +245,8 @@
                             android:layout_marginRight="10dp"
                             android:spinnerMode="dropdown"
                             android:entries="@array/gender"
-                            android:textSize="15sp"/>
+                            android:textSize="15sp"
+                            android:popupBackground="@color/white"/>
 
                         <ImageView
                             android:id="@+id/tvGender"
@@ -262,7 +275,8 @@
                     android:text="Deceased's Age"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -283,7 +297,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter Deceased age"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -297,7 +313,8 @@
                     android:text="Father's Name"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -317,7 +334,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter father's name"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -331,7 +350,8 @@
                     android:text="Mother's Name"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -351,7 +371,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter mother's name"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -365,7 +387,8 @@
                     android:text="Religion"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -390,7 +413,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:spinnerMode="dropdown"
-                    android:entries="@array/religion"/>
+                    android:entries="@array/religion"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/tvReligion"
@@ -415,7 +439,8 @@
                     android:text="Reason of Death"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -435,7 +460,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Enter reason of death"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -445,7 +472,8 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -459,7 +487,8 @@
                     android:text="Death Place"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -484,7 +513,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:spinnerMode="dropdown"
-                    android:entries="@array/Death_Place"/>
+                    android:entries="@array/Death_Place"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/tvDeathPlace"
@@ -509,7 +539,8 @@
                     android:text="Address"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -529,7 +560,9 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:hint="Address"
-                android:paddingLeft="10dp"/>
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:inputType="textCapSentences"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -543,7 +576,8 @@
                     android:text="Select Area"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -567,7 +601,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:textSize="15sp"
-                    android:spinnerMode="dropdown"/>
+                    android:spinnerMode="dropdown"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/ivdrop"
@@ -602,7 +637,8 @@
                             android:text="Zone"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -625,7 +661,8 @@
                             android:background="@drawable/edittext_bg"
                             android:hint="Enter zone"
                             android:textSize="15sp"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -648,7 +685,8 @@
                             android:text="Pincode"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -672,7 +710,8 @@
                             android:textSize="15sp"
                             android:background="@drawable/edittext_bg"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"/>
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -702,7 +741,8 @@
                             android:text="Ward"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -725,7 +765,8 @@
                             android:background="@drawable/edittext_bg"
                             android:hint="Enter ward"
                             android:textSize="15sp"
-                            android:paddingLeft="10dp"/>
+                            android:paddingLeft="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -748,7 +789,8 @@
                             android:text="Block"
                             android:textStyle="bold"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginTop="15dp"/>
+                            android:layout_marginTop="15dp"
+                            android:textColor="@color/black"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -772,7 +814,8 @@
                             android:textSize="15sp"
                             android:background="@drawable/edittext_bg"
                             android:layout_marginLeft="10dp"
-                            android:layout_marginRight="10dp"/>
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/black"/>
 
                     </RelativeLayout>
 
@@ -788,7 +831,8 @@
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -802,7 +846,8 @@
                     android:text="Choose Criteria"
                     android:textStyle="bold"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/black"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -827,7 +872,8 @@
                     android:layout_marginRight="10dp"
                     android:spinnerMode="dropdown"
                     android:entries="@array/Criteria_Death"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:popupBackground="@color/white"/>
 
                 <ImageView
                     android:id="@+id/tvCriteria"
@@ -848,7 +894,8 @@
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"/>
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSubmit"
