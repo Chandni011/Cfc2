@@ -380,12 +380,147 @@
                 android:id="@+id/tvChooseDocument"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Choose Document to upload"
+                android:text="Upload Documents Online"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:id="@+id/llAdvertisement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/cbAdvertisementAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address Proof"
+                android:checked="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:button="@drawable/custom_checkbox"/>
+
+            <RadioGroup
+                android:id="@+id/rgAdvertisementAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="-22dp"
+                android:layout_marginLeft="20dp">
+
+                <RadioButton
+                    android:id="@+id/rbAdvertisementAddressVoterIDCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Voter ID Card"/>
+
+                <RadioButton
+                    android:id="@+id/rbAdvertisementAddressRationCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ration Card"
+                    android:layout_marginTop="-25dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbAdvertisementAddressDriving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Driving License"
+                    android:layout_marginTop="-25dp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLicense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbLicenseAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"/>
+
+                <RadioGroup
+                    android:id="@+id/rgLicense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbLicenseAddressAdhaarcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"
+                        android:layout_marginBottom="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLicenseAddressVoterIDCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLicenseAddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ration Card"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbLicenseIDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgLicenseIDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbLicenseIDAdhaarcard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"
+                        android:layout_marginBottom="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLicenseIDVoterIDCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"

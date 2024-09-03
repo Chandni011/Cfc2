@@ -2,6 +2,7 @@ package com.deificdigital.cfc2.activities;
 
 import static java.security.AccessController.getContext;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -38,17 +39,21 @@ public class HomeActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private ImageView hamburgerIcon;
 
-    ImageView birth, trade, house, death, mutation, garbage, water, other;
+    ImageView birth, trade, house, death, mutation, garbage, water, other,ivDog,ivUdyaan, ivCivil;
     TextView tvmutation, tvothers;
-    LinearLayout llbirth, lltrade, llhouse, lldeath, llgarbage, llwater;
+    LinearLayout llbirth, lltrade, llhouse, lldeath, llgarbage, llwater, lldog, lludyaan, llcivil;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
 
+        ivDog = findViewById(R.id.ivDog);
+        ivUdyaan = findViewById(R.id.ivUdyaan);
+        ivCivil = findViewById(R.id.ivCivilWork);
         birth = findViewById(R.id.ivBirthLogo);
         trade = findViewById(R.id.ivTradeTaxLogo);
         house = findViewById(R.id.ivHouseTaxLogo);
@@ -57,6 +62,9 @@ public class HomeActivity extends AppCompatActivity {
         garbage = findViewById(R.id.ivGarbageLogo);
         water = findViewById(R.id.ivWaterLogo);
         other = findViewById(R.id.ivOthersLogo);
+        lldog = findViewById(R.id.llDogRegistration);
+        lludyaan = findViewById(R.id.llUdyaanVibhag);
+        llcivil = findViewById(R.id.llCivil);
         llbirth = findViewById(R.id.llBirthCertificate);
         lltrade = findViewById(R.id.llTradeTax);
         llhouse = findViewById(R.id.llHouseTax);
@@ -113,6 +121,54 @@ public class HomeActivity extends AppCompatActivity {
         StringBuilder DeathBuilder = new StringBuilder();
         StringBuilder GarbageBuilder = new StringBuilder();
         StringBuilder WaterBuilder = new StringBuilder();
+        StringBuilder DogBuilder = new StringBuilder();
+        StringBuilder UdyaanBuilder = new StringBuilder();
+        StringBuilder CivilBuilder = new StringBuilder();
+
+        for (int i = 0; i < lldog.getChildCount(); i++){
+            View child = lldog.getChildAt(i);
+            if (child instanceof TextView){
+                TextView textView = (TextView) child;
+                DogBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
+        ivDog.setOnClickListener(v -> {
+            String dogtxt = DogBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode", 8);
+            i.putExtra("titleEighth", dogtxt);
+            startActivity(i);
+        });
+
+        for (int i = 0; i < lludyaan.getChildCount(); i++){
+            View child = lludyaan.getChildAt(i);
+            if (child instanceof TextView){
+                TextView textView = (TextView) child;
+                UdyaanBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
+        ivUdyaan.setOnClickListener(v -> {
+            String udyaantxt = UdyaanBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode", 10);
+            i.putExtra("titleTenth", udyaantxt);
+            startActivity(i);
+        });
+
+        for (int i = 0; i < llcivil.getChildCount(); i++){
+            View child = llcivil.getChildAt(i);
+            if (child instanceof TextView){
+                TextView textView = (TextView) child;
+                CivilBuilder.append(textView.getText().toString()).append(" ");
+            }
+        }
+        ivCivil.setOnClickListener(v -> {
+            String civiltxt = CivilBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode", 11);
+            i.putExtra("titleEleventh", civiltxt);
+            startActivity(i);
+        });
 
 // Iterate through all child views of the LinearLayout
         for (int i = 0; i < llbirth.getChildCount(); i++) {
@@ -122,16 +178,12 @@ public class HomeActivity extends AppCompatActivity {
                 BirthBuilder.append(textView.getText().toString()).append(" ");
             }
         }
-        birth.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                String birthtxt = BirthBuilder.toString();
-                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",1);
-                i.putExtra("titleFirst", birthtxt);
-                startActivity(i);
-            }
+        birth.setOnClickListener(v -> {
+            String birthtxt = BirthBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode",1);
+            i.putExtra("titleFirst", birthtxt);
+            startActivity(i);
         });
 
         for (int i = 0; i < lltrade.getChildCount(); i++) {
@@ -141,16 +193,12 @@ public class HomeActivity extends AppCompatActivity {
                 TradeBuilder.append(textView.getText().toString()).append(" ");
             }
         }
-        trade.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                String tradetxt = TradeBuilder.toString();
-                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",2);
-                i.putExtra("titleSecond", tradetxt);
-                startActivity(i);
-            }
+        trade.setOnClickListener(v -> {
+            String tradetxt = TradeBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode",2);
+            i.putExtra("titleSecond", tradetxt);
+            startActivity(i);
         });
 
         for (int i = 0; i < llhouse.getChildCount(); i++) {
@@ -169,16 +217,12 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         }
-        house.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                String housetxt = HouseBuilder.toString();
-                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",3);
-                i.putExtra("titleThird",housetxt);
-                startActivity(i);
-            }
+        house.setOnClickListener(v -> {
+            String housetxt = HouseBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode",3);
+            i.putExtra("titleThird",housetxt);
+            startActivity(i);
         });
 
         for (int i = 0; i < lldeath.getChildCount(); i++) {
@@ -188,27 +232,20 @@ public class HomeActivity extends AppCompatActivity {
                 DeathBuilder.append(textView.getText().toString()).append(" ");
             }
         }
-        death.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                String deathtxt = DeathBuilder.toString();
-                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",4);
-                i.putExtra("titleFourth", deathtxt);
-                startActivity(i);
-            }
+        death.setOnClickListener(v -> {
+            String deathtxt = DeathBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode",4);
+            i.putExtra("titleFourth", deathtxt);
+            startActivity(i);
         });
 
-        mutation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String mutationtxt = tvmutation.getText().toString();
-                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",5);
-                i.putExtra("titleFifth", mutationtxt);
-                startActivity(i);
-            }
+        mutation.setOnClickListener(v -> {
+            String mutationtxt = tvmutation.getText().toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode",5);
+            i.putExtra("titleFifth", mutationtxt);
+            startActivity(i);
         });
 
         for (int i = 0; i < llgarbage.getChildCount(); i++) {
@@ -227,16 +264,12 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         }
-        garbage.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                String garbagetxt = GarbageBuilder.toString();
-                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",6);
-                i.putExtra("titleSixth", garbagetxt);
-                startActivity(i);
-            }
+        garbage.setOnClickListener(v -> {
+            String garbagetxt = GarbageBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode",6);
+            i.putExtra("titleSixth", garbagetxt);
+            startActivity(i);
         });
 
         for (int i = 0; i < llwater.getChildCount(); i++) {
@@ -246,24 +279,17 @@ public class HomeActivity extends AppCompatActivity {
                 WaterBuilder.append(textView.getText().toString()).append(" ");
             }
         }
-        water.setOnClickListener(new View.OnClickListener() {
-            @Override
-
-            public void onClick(View v) {
-                String watertxt = WaterBuilder.toString();
-                Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",7);
-                i.putExtra("titleSeventh", watertxt);
-                startActivity(i);
-            }
+        water.setOnClickListener(v -> {
+            String watertxt = WaterBuilder.toString();
+            Intent i = new Intent(HomeActivity.this, DetailsActivity.class);
+            i.putExtra("requestCode",7);
+            i.putExtra("titleSeventh", watertxt);
+            startActivity(i);
         });
 
-        other.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(HomeActivity.this, OthersActivity.class);
-                startActivity(i);
-            }
+        other.setOnClickListener(v -> {
+            Intent i = new Intent(HomeActivity.this, OthersActivity.class);
+            startActivity(i);
         });
         // Set OnClickListener to open the drawer when ImageView is clicked
 

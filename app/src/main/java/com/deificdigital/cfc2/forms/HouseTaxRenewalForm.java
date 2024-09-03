@@ -1,6 +1,9 @@
 package com.deificdigital.cfc2.forms;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -24,6 +27,8 @@ public class HouseTaxRenewalForm extends AppCompatActivity {
         setContentView(R.layout.activity_house_tax_renewal_form);
 
         Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
+        LinearLayout llPayment = findViewById(R.id.llPayment);
+        LinearLayout llProblem = findViewById(R.id.llProblem);
 
         List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_HouseTaxRenewal));
         CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
@@ -33,6 +38,42 @@ public class HouseTaxRenewalForm extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        criteriaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 1:
+                        llPayment.setVisibility(View.VISIBLE);
+                        llProblem.setVisibility(View.GONE);
+                        break;
+
+                    case 2:
+                        llPayment.setVisibility(View.VISIBLE);
+                        llProblem.setVisibility(View.GONE);
+                        break;
+
+                    case 3:
+                        llPayment.setVisibility(View.GONE);
+                        llProblem.setVisibility(View.VISIBLE);
+                        break;
+
+                    case 4:
+                        llPayment.setVisibility(View.GONE);
+                        llProblem.setVisibility(View.VISIBLE);
+                        break;
+
+                    default:
+                        llPayment.setVisibility(View.GONE);
+                        llProblem.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
         });
     }
 }

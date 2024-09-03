@@ -1,6 +1,10 @@
 package com.deificdigital.cfc2.forms;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -17,12 +21,14 @@ import java.util.List;
 
 public class EncroachmentForm extends AppCompatActivity {
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_encroachment_form);
         Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
+        LinearLayout llImageProof = findViewById(R.id.llImageProof);
 
         List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Encroachment));
         CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
@@ -32,6 +38,24 @@ public class EncroachmentForm extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        criteriaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 1:
+                        llImageProof.setVisibility(View.VISIBLE);
+                        break;
+
+                    default:
+                        llImageProof.setVisibility(View.GONE);
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
         });
     }
 }

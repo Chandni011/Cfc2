@@ -4,9 +4,11 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -40,6 +42,11 @@ public class DeathForm extends AppCompatActivity {
         Spinner religionSpinner = findViewById(R.id.spinnerReligion);
         Spinner deathPlaceSpinner = findViewById(R.id.spinnerDeathPlace);
         Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
+        LinearLayout llAccidental = findViewById(R.id.llAccidentalDeath);
+        LinearLayout llAfter10Year = findViewById(R.id.llAfter10YearDeath);
+        LinearLayout llAbove1Year = findViewById(R.id.llAbove1YearDeath);
+        LinearLayout llAbove21Days = findViewById(R.id.llAbove21DaysDeath);
+        LinearLayout ll1to21Days = findViewById(R.id.ll1to21Death);
 
         List<String> relationItems = Arrays.asList(getResources().getStringArray(R.array.Deceased_Relation));
         CustomSpinnerAdapter relationAdapter = new CustomSpinnerAdapter(this, relationItems);
@@ -87,5 +94,64 @@ public class DeathForm extends AppCompatActivity {
         // Set click listener on both the EditText and ImageView
         etDateOfBirth.setOnClickListener(dateClickListener);
         ivDateIcon.setOnClickListener(dateClickListener);
+
+        criteriaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 1:
+                        llAccidental.setVisibility(View.VISIBLE);
+                        llAfter10Year.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        llAbove21Days.setVisibility(View.GONE);
+                        ll1to21Days.setVisibility(View.GONE);
+                        break;
+
+                    case 2:
+                        llAccidental.setVisibility(View.GONE);
+                        llAfter10Year.setVisibility(View.VISIBLE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        llAbove21Days.setVisibility(View.GONE);
+                        ll1to21Days.setVisibility(View.GONE);
+                        break;
+
+                    case 3:
+                        llAccidental.setVisibility(View.GONE);
+                        llAfter10Year.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.VISIBLE);
+                        llAbove21Days.setVisibility(View.GONE);
+                        ll1to21Days.setVisibility(View.GONE);
+                        break;
+
+                    case 4:
+                        llAccidental.setVisibility(View.GONE);
+                        llAfter10Year.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        llAbove21Days.setVisibility(View.VISIBLE);
+                        ll1to21Days.setVisibility(View.GONE);
+                        break;
+
+                    case 5:
+                        llAccidental.setVisibility(View.GONE);
+                        llAfter10Year.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        llAbove21Days.setVisibility(View.GONE);
+                        ll1to21Days.setVisibility(View.VISIBLE);
+                        break;
+
+                    default:
+                        llAccidental.setVisibility(View.GONE);
+                        llAfter10Year.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        llAbove21Days.setVisibility(View.GONE);
+                        ll1to21Days.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 }

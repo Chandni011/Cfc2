@@ -890,12 +890,1632 @@
                 android:id="@+id/tvChooseDocument"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Choose Document to upload"
+                android:text="Upload Document Online"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/llAccidentalDeath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalIDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalIDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalIDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalIDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalIDDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalIDPANCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="PAN Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalIDRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalIDPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Passport"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalAddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalAddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalAddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalAddressDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalAddressEletricity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Eletricity Bill"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalAddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalAddressPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Passport"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalAffidavit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affidavit"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalAffidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalAffidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affidavit of Rs. 10"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalGhat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ghat/Graveyard/Burial Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalGhat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-18dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalGhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reciept of Ghat/ \nGraveyard/Burial"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalMedical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Certificate"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalMedical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalMedical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Death Certificate Proof \n(Hospital/Doctor)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalDeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Death Place Proof From"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalDeath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalDeath1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Hospital)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalDeath2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Home)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalMortem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post-Mortem Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalMortem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalMortem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Postmortem Disposal \nReciept"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAccidentalPolice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Police-Station Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAccidentalPolice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAccidentalPolice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Police Thana Report Copy"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAbove1YearDeath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbAbove1YearIDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1YearIDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearIDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearIDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearIDDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearIDPANCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="PAN Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearIDRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearIDPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="RPasword"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1YearAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1YearAddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearAddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearAddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearAddressDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearAddressEletricity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Eletricity Bill"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearAddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearAddressPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Passport"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1YearAffidavit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affidavit"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1YearAffidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearAffidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affidavit of Rs. 10"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1YearOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1YearOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1YearGhat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ghat/Graveyard/Burial Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1YearGhat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-18dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearGhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reciept of Ghat/ \nGraveyard/Burial"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1YearMedical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Certificate"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1YearMedical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearMedical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Death Certificate Proof \n(Hospital/Doctor)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1YearDeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Death Place Proof From"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1YearDeath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearDeath1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Hospital)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1YearDeath2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Home)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAfter10YearDeath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearIDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10IDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearIDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearIDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearIDDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearIDPANCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="PAN Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearIDRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10YearAddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearAddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearAddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearAddressDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearAddressEletricity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Eletricity Bill"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearAddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearAddressPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Passport"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearAffidavit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affidavit"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10YearAffidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearAffidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affidavit of Rs. 10"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10YearOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearGhat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ghat/Graveyard/Burial Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10YearGhat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-18dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearGhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reciept of Ghat/ \nGraveyard/Burial"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearMedical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Certificate"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10YearMedical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearMedical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Death Certificate Proof \n(Hospital/Doctor)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Order proof of first class magistrate/ \nPresident/Magistrtrate"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10YearOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Proof Copy"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAfter10YearDeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Death Place Proof From"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAfter10YearDeath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearDeath1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Hospital)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAfter10YearDeath2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Home)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAbove21DaysDeath"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbAbove21DaysIDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove21DaysIDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysIDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysIDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysIDDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove21DaysMedical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Certificate"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove21DaysMedical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysMedical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Death Certificate Proof \n(Hospital/Doctor)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove21DaysDeath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Death Place Proof From"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove21DaysDeath"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysDeath1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Hospital)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysDeath2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Home)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove21DaysOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove21DaysOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove21DaysGhat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ghat/Graveyard/Burial Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove21DaysGhat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-18dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysGhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reciept of Ghat/ \nGraveyard/Burial"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove21DaysAffidavit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affidavit"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove21DaysAffidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysAffidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affidavit of Rs. 10"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+
+
+                <CheckBox
+                    android:id="@+id/cbAbove21DaysAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove21DaysAddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysAddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysAddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove21DaysAddressDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1to21Death"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb1to21IDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21IDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDPANCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="PAN Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="RPasword"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb1to21Address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginTop="-15dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21AddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Adhaar Card"
+                        android:fontFamily="@font/poppins_medium"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Voter ID Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressDriving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Driving License"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressEletricity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Eletricity Bill"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Ration Card"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Passport"
+                        android:fontFamily="@font/poppins_medium"
+                        android:layout_marginTop="-24dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb1to21Ghat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ghat/Graveyard/Burial Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21Ghat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-18dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21Ghat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Reciept of Ghat/ \nGraveyard/Burial"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb1to21Other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21Other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21Other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Other"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb1to21Death"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Death Place Proof From"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-15dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21Death"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21Death1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Hospital)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21Death2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From-4 (Home)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb1to21Medical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medical Certificate"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/poppins_medium"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21Medical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-15dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21Medical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Death Certificate Proof \n(Hospital/Doctor)"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="12sp"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSubmit"

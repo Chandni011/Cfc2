@@ -8,4 +8,6 @@
     <color name="light_blue_">#F3F5F8</color>
     <color name="gray">#858080</color>
     <color name="red">#FA1807</color>
+    <color name="checkbox_color_checked">#0066cc</color> <!-- Example color -->
+    <color name="checkbox_color_unchecked">#ffffff</color>
 </resources>

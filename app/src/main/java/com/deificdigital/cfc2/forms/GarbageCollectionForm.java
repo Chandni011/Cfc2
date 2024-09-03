@@ -1,7 +1,14 @@
 package com.deificdigital.cfc2.forms;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -25,6 +32,9 @@ public class GarbageCollectionForm extends AppCompatActivity {
         setContentView(R.layout.activity_garbage_collection_form);
 
         Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
+        LinearLayout llGarbageCollection = findViewById(R.id.llGarbageCollection);
+        CheckBox cbGarbageCollection = findViewById(R.id.cbGarbageCollection);
+        RadioGroup rgGarbageCollection = findViewById(R.id.rgGarbageCollection);
 
         List<String> CriteriaItems = Arrays.asList(getResources().getStringArray(R.array.Criteria_Garbage_Collection));
         CustomSpinnerAdapter criteriaAdapter = new CustomSpinnerAdapter(this, CriteriaItems);
@@ -41,5 +51,57 @@ public class GarbageCollectionForm extends AppCompatActivity {
             criteriaArray[i] = criteriaArray[i].replace(" Complaint/", "\nComplaint/");
         }
 
+        criteriaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 1:
+                        llGarbageCollection.setVisibility(View.VISIBLE);
+                        updateRadioGroupVisibility();
+                        break;
+
+                    case 2:
+                        llGarbageCollection.setVisibility(View.VISIBLE);
+                        updateRadioGroupVisibility();
+                        break;
+
+                    case 3:
+                        llGarbageCollection.setVisibility(View.VISIBLE);
+                        updateRadioGroupVisibility();
+                        break;
+
+                    default:
+                        llGarbageCollection.setVisibility(View.GONE);
+                }
+            }
+
+            private void updateRadioGroupVisibility() {
+                if (cbGarbageCollection.isChecked()) {
+                    rgGarbageCollection.setVisibility(View.VISIBLE);
+                } else {
+                    rgGarbageCollection.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        cbGarbageCollection.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                updateRadioGroupVisibility();
+            }
+
+            private void updateRadioGroupVisibility() {
+                if (cbGarbageCollection.isChecked()) {
+                    rgGarbageCollection.setVisibility(View.VISIBLE);
+                } else {
+                    rgGarbageCollection.setVisibility(View.GONE);
+                }
+            }
+        });
     }
 }

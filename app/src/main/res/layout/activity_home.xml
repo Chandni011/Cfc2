@@ -158,7 +158,7 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="470dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -166,443 +166,580 @@
                 app:layout_constraintTop_toBottomOf="@id/rlImage"
                 android:background="@drawable/cardview_bg">
 
-                <androidx.cardview.widget.CardView
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/cardview_bg">
+                    android:background="@drawable/cardview_bg"
+                    android:layout_gravity="center">
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/cardview_bg"
-                        android:layout_gravity="center">
+                    <TextView
+                        android:id="@+id/tvKSCService"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="35dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="City Services"
+                        android:textColor="@color/blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <TextView
-                            android:id="@+id/tvKSCService"
+                    <LinearLayout
+                        android:id="@+id/llFirst"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/tvKSCService"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginTop="16dp"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:orientation="vertical"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="20dp"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="City Services"
-                            android:textColor="@color/blue"
-                            android:textSize="20sp"
-                            android:textStyle="bold"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                            android:padding="5dp"
+                            android:paddingEnd="30dp">
 
-                        <LinearLayout
-                            android:id="@+id/llFirst"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:layout_constraintTop_toBottomOf="@id/tvKSCService"
-                            app:layout_constraintStart_toStartOf="parent"
-                            android:layout_marginTop="16dp"
-                            app:layout_constraintEnd_toEndOf="parent">
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
+                            <ImageView
+                                android:id="@+id/ivBirthLogo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/birth_logo"
+                                app:layout_constraintEnd_toEndOf="parent"
                                 android:layout_gravity="center_horizontal"
-                                android:padding="5dp"
-                                android:paddingEnd="20dp">
-
-                                <ImageView
-                                    android:id="@+id/ivBirthLogo"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/birth_logo"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    android:layout_gravity="center_horizontal"
-                                    app:layout_constraintStart_toStartOf="parent"/>
-
-                                <LinearLayout
-                                    android:id="@+id/llBirthCertificate"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal"
-                                    android:orientation="vertical"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/ivBirthLogo">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Birth"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"
-                                        android:textSize="12sp"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:textColor="@color/blue"
-                                        android:layout_marginTop="-5dp"
-                                        android:text="Certificate"
-                                        android:fontFamily="@font/poppins_medium"
-                                        android:textSize="12sp"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
+                                app:layout_constraintStart_toStartOf="parent"/>
 
                             <LinearLayout
+                                android:id="@+id/llBirthCertificate"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:padding="5dp"
-                                android:paddingEnd="20dp"
-                                android:layout_gravity="center_horizontal">
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/ivBirthLogo">
 
-                                <ImageView
-                                    android:id="@+id/ivTradeTaxLogo"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/trade_tax_logo"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    android:layout_gravity="center_horizontal"/>
-
-                                <LinearLayout
-                                    android:id="@+id/llTradeTax"
+                                <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center_horizontal"
-                                    android:orientation="vertical"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent">
+                                    android:text="Birth"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp"/>
 
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Trade Tax"
-                                        android:textColor="@color/blue"
-                                        android:textSize="12sp"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text="(C.T.A.O)"
-                                        android:textColor="@color/blue"
-                                        android:textSize="12sp"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="5dp">
-
-                                <ImageView
-                                    android:id="@+id/ivHouseTaxLogo"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/house_tax"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    android:layout_gravity="center_horizontal"/>
-
-                                <LinearLayout
-                                    android:id="@+id/llHouseTax"
+                                <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="House Tax "
-                                        android:textSize="12sp"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text="Assessment"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"
-                                        android:textSize="12sp" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text="(New)"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"
-                                        android:textSize="12sp" />
-
-                                </LinearLayout>
+                                    android:textColor="@color/blue"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Certificate"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp"/>
 
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/llSecond"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:layout_constraintTop_toBottomOf="@id/llFirst"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent">
+                            android:orientation="vertical"
+                            android:paddingEnd="30dp">
+
+                            <ImageView
+                                android:id="@+id/ivCivilWork"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/civil"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"/>
 
                             <LinearLayout
+                                android:id="@+id/llCivil"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:padding="5dp"
-                                android:paddingEnd="20dp">
-
-                                <ImageView
-                                    android:id="@+id/ivDeathLogo"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/death_certificate"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    android:layout_gravity="center_horizontal"/>
-
-                                <LinearLayout
-                                    android:id="@+id/llDeath"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/ivDeathLogo">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Death"
-                                        android:textSize="12sp"
-                                        android:fontFamily="@font/poppins_medium"
-                                        android:textColor="@color/blue"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text="Certificate"
-                                        android:textSize="12sp"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="5dp"
-                                android:paddingEnd="20dp">
-
-                                <ImageView
-                                    android:id="@+id/ivMutation"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/mutation"
-                                    android:layout_gravity="center_horizontal"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/ivGarbageLogo" />
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/ivBirthLogo">
 
                                 <TextView
-                                    android:id="@+id/tvMutation"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:paddingBottom="20dp"
-                                    android:text="Mutation"
+                                    android:text="Civil"
                                     android:textColor="@color/blue"
                                     android:fontFamily="@font/poppins_medium"
-                                    android:textSize="12sp"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@id/ivMutation" />
+                                    android:textSize="12sp"/>
 
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="5dp"
-                                android:paddingEnd="20dp">
-
-                                <ImageView
-                                    android:id="@+id/ivWaterLogo"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/water"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    android:layout_gravity="center_horizontal"
-                                    app:layout_constraintTop_toBottomOf="@id/ivOthersLogo" />
-
-                                <LinearLayout
-                                    android:id="@+id/llWater"
-                                    android:layout_width="64dp"
-                                    android:layout_height="38dp"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Water"
-                                        android:textSize="12sp"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text="Complaint"
-                                        android:textColor="@color/blue"
-                                        android:textSize="12sp"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Work"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp"/>
 
                             </LinearLayout>
 
                         </LinearLayout>
 
                         <LinearLayout
-                            android:id="@+id/llThird"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            app:layout_constraintTop_toBottomOf="@id/llSecond"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            android:padding="5dp">
+                            android:orientation="vertical"
+                            android:paddingEnd="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivUdyaan"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/udyaan"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"/>
 
                             <LinearLayout
+                                android:id="@+id/llUdyaanVibhag"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
                                 android:orientation="vertical"
-                                android:padding="5dp"
-                                android:paddingEnd="20dp">
-
-                                <ImageView
-                                    android:id="@+id/ivGarbageLogo"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/garbage"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    android:layout_gravity="center_horizontal"
-                                    app:layout_constraintStart_toStartOf="parent"/>
-
-                                <LinearLayout
-                                    android:id="@+id/llGarbage"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:orientation="vertical"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent">
-
-                                    <TextView
-                                        android:layout_width="59dp"
-                                        android:layout_height="wrap_content"
-                                        android:text="Garbage"
-                                        android:textColor="@color/blue"
-                                        android:textSize="12sp"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text=" Collection"
-                                        android:textSize="12sp"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text=" and Dead"
-                                        android:textSize="12sp"
-                                        android:textColor="@color/blue"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="-5dp"
-                                        android:text="Animals"
-                                        android:textColor="@color/blue"
-                                        android:textSize="12sp"
-                                        android:fontFamily="@font/poppins_medium"/>
-
-                                </LinearLayout>
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:orientation="vertical"
-                                android:padding="10dp">
-
-                                <ImageView
-                                    android:id="@+id/ivOthersLogo"
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
-                                    android:src="@drawable/others"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    android:layout_gravity="center_horizontal"
-                                    app:layout_constraintStart_toStartOf="parent"/>
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/ivBirthLogo">
 
                                 <TextView
-                                    android:id="@+id/tvOthers"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Others"
+                                    android:text="Udyaan"
                                     android:textColor="@color/blue"
                                     android:fontFamily="@font/poppins_medium"
-                                    android:textSize="12sp"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="0.81"
-                                    app:layout_constraintStart_toStartOf="parent"/>
+                                    android:textSize="12sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Vibhag"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp"/>
 
                             </LinearLayout>
 
                         </LinearLayout>
 
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSecond"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/llFirst"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingEnd="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivDeathLogo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/death_certificate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_gravity="center_horizontal"/>
+
+                            <LinearLayout
+                                android:id="@+id/llDeath"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/ivDeathLogo">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Death"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textColor="@color/blue"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Certificate"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:paddingEnd="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivWaterLogo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/water"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_constraintTop_toBottomOf="@id/ivOthersLogo" />
+
+                            <LinearLayout
+                                android:id="@+id/llWater"
+                                android:layout_width="64dp"
+                                android:layout_height="38dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Water"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Complaint"
+                                    android:textColor="@color/blue"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivDog"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/dog"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                            <LinearLayout
+                                android:id="@+id/llDogRegistration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/ivBirthLogo">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Dog"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Registration"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llThird"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/llSecond"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="5dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:paddingEnd="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivMutation"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/mutation"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/ivGarbageLogo" />
+
+                            <TextView
+                                android:id="@+id/tvMutation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="20dp"
+                                android:text="Mutation"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/ivMutation" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingEnd="20dp">
+
+                            <ImageView
+                                android:id="@+id/ivHouseTaxLogo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/house_tax"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_gravity="center_horizontal"/>
+
+                            <LinearLayout
+                                android:id="@+id/llHouseTax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="House Tax "
+                                    android:textSize="12sp"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Assessment"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="(New)"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:layout_gravity="center_horizontal">
+
+                            <ImageView
+                                android:id="@+id/ivTradeTaxLogo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/trade_tax_logo"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                android:layout_gravity="center_horizontal"/>
+
+                            <LinearLayout
+                                android:id="@+id/llTradeTax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Trade Tax"
+                                    android:textColor="@color/blue"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="(C.T.A.O)"
+                                    android:textColor="@color/blue"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llFourth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toBottomOf="@id/llThird"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:padding="5dp">
 
 
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="5dp"
+                            android:paddingEnd="20dp">
 
+                            <ImageView
+                                android:id="@+id/ivGarbageLogo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/garbage"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"/>
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                            <LinearLayout
+                                android:id="@+id/llGarbage"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent">
 
-                </androidx.cardview.widget.CardView>
+                                <TextView
+                                    android:layout_width="59dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="Garbage"
+                                    android:textColor="@color/blue"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text=" Collection"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text=" and Dead"
+                                    android:textSize="12sp"
+                                    android:textColor="@color/blue"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="-5dp"
+                                    android:text="Animals"
+                                    android:textColor="@color/blue"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/poppins_medium"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/ivOthersLogo"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:src="@drawable/others"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                            <TextView
+                                android:id="@+id/tvOthers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Others"
+                                android:textColor="@color/blue"
+                                android:fontFamily="@font/poppins_medium"
+                                android:textSize="12sp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.81"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </ScrollView>
 

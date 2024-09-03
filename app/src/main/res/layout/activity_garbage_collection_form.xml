@@ -458,12 +458,49 @@
                 android:id="@+id/tvChooseDocument"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Choose Document to upload"
+                android:text="Upload Document Online"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/llGarbageCollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbGarbageCollection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Image Proof"
+                    android:button="@drawable/custom_checkbox"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/black"/>
+
+                <RadioGroup
+                    android:id="@+id/rgGarbageCollection"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbGarbageCollection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:text="Image Proof"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textColor="@color/black"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"

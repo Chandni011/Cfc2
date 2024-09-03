@@ -17,13 +17,13 @@ import com.deificdigital.cfc2.R;
 
 public class OthersActivity extends AppCompatActivity {
 
-    ImageView ivDog, ivCow, ivUdyaan, ivCivil, ivSewerage, ivSewerageTax, ivSewerageAssessment, ivWater, ivWaterMutation, ivLightning,
+    ImageView ivCow, ivSewerage, ivSewerageTax, ivSewerageAssessment, ivWater, ivWaterMutation, ivLightning,
             ivHouseTax, ivBooking, ivPension, ivTradeLicense, ivAds, ivOutsourcing, ivEncrochment, ivMiscellaneous, ivSewerageComplaint, ivBack;
 
     LinearLayout llCow, llSewerage, llSewerageTax, llSewerageAssessment, llWater, llWaterMutation, llHouseTax
             ,llBooking, llTradeLicense, llOutsourcing, llEncrochment, llSewerageComplaint;
 
-    TextView tvDog, tvUdyaan, tvCivil, tvLightning, tvPension, tvAds, tvMiscellaneous;
+    TextView tvLightning, tvPension, tvAds, tvMiscellaneous;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +36,8 @@ public class OthersActivity extends AppCompatActivity {
             return insets;
         });
 
-        ivDog = findViewById(R.id.ivDog);
+
         ivCow = findViewById(R.id.ivCow);
-        ivUdyaan = findViewById(R.id.ivUdyaan);
-        ivCivil = findViewById(R.id.ivCivil);
         ivSewerage = findViewById(R.id.ivSewerage);
         ivSewerageTax = findViewById(R.id.ivSewerageTax);
         ivSewerageAssessment = findViewById(R.id.ivSewerageAssessment);
@@ -70,9 +68,6 @@ public class OthersActivity extends AppCompatActivity {
         llEncrochment = findViewById(R.id.llEncrochment);
         llSewerageComplaint = findViewById(R.id.llSewerageComplaint);
 
-        tvDog = findViewById(R.id.tvDog);
-        tvUdyaan = findViewById(R.id.tvUdyaan);
-        tvCivil = findViewById(R.id.tvCivil);
         tvLightning = findViewById(R.id.tvLightning);
         tvPension = findViewById(R.id.tvPension);
         tvAds = findViewById(R.id.tvAds);
@@ -98,17 +93,6 @@ public class OthersActivity extends AppCompatActivity {
             }
         });
 
-        ivDog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String dogtxt = tvDog.getText().toString();
-                Intent i = new Intent(OthersActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",8);
-                i.putExtra("titleEighth", dogtxt);
-                startActivity(i);
-            }
-        });
-
         for (int i = 0; i < llCow.getChildCount(); i++) {
             View child = llCow.getChildAt(i);
             if (child instanceof TextView) {
@@ -124,26 +108,6 @@ public class OthersActivity extends AppCompatActivity {
                 Intent i = new Intent(OthersActivity.this, DetailsActivity.class);
                 i.putExtra("requestCode",9);
                 i.putExtra("titleNinth", cowtxt);
-                startActivity(i);
-            }
-        });
-        ivUdyaan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String udyaantxt = tvUdyaan.getText().toString();
-                Intent i = new Intent(OthersActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",10);
-                i.putExtra("titleTenth", udyaantxt);
-                startActivity(i);
-            }
-        });
-        ivCivil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String civiltxt = tvCivil.getText().toString();
-                Intent i = new Intent(OthersActivity.this, DetailsActivity.class);
-                i.putExtra("requestCode",11);
-                i.putExtra("titleEleventh", civiltxt);
                 startActivity(i);
             }
         });

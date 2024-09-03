@@ -898,12 +898,681 @@
                 android:id="@+id/tvChooseDocument"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-                android:text="Choose Document to upload"
+                android:text="Upload Document online"
                 android:textStyle="bold"
                 android:fontFamily="@font/poppins_medium"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
                 android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/llNameCorrection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbIDCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Card"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAdhaarCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbIDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rbVoterIDCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbIDDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAddressProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Card"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAddressAdhaarCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAddressVoterIDCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAddressDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAddressEletricityBill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAffidavit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affidavit"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAffidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAffidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affidavit of Rs. 10"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbImageProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Image Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgImageProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbImageProof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Old Birth Certificate"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLiterate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbLiterateIDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Card"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"/>
+
+                <RadioGroup
+                    android:id="@+id/rgLiterateIDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbIDLterateIDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateIDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateIDDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateIDPANCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PAN Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateIDRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ration Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateIDPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passport"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbLiterateAddressProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgLiterateAddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbIDLterateAddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateAddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateAddressDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateAddressElectricityBill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateAddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ration Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateAddressPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passport"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbLiterateAffidavit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affidavit"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgLiterateAffidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbLiterateAffidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affidavit of Rs. 10"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAbove1Year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cbAboveIDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1IDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1IDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1IDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1IDDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1IDPANCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PAN Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1IDRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ration Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1IDPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passport"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1AddressProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1AddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbIDAbove1AddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1AddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1AddressDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1AddressElectricityBill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1AddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ration Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1AddressPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passport"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1Affidavit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Affidavit"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1Affidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1Affidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Affidavit of Rs. 10"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cbAbove1ImageProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Image Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAbove1ImageProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rbAbove1ImageProof"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Proof of Birth"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1to21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb1to21IDProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ID Card"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21IDProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDPANCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PAN Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ration Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21IDPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passport"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb1to21AddressProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21AddressProof"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressAdhaarCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Adhaar Card"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressVoterCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voter ID Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressDrivingLicense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driving License"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressElectricityBill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Electricity Bill"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressRationCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ration Card"
+                        android:layout_marginTop="-25dp"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1to21AddressPassport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Passport"
+                        android:layout_marginTop="-25dp"/>
+
+                </RadioGroup>
+
+                <CheckBox
+                    android:id="@+id/cb1to21ImageProof"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Image Proof"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:button="@drawable/custom_checkbox"
+                    android:layout_marginTop="-20dp"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1to21Affidavit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="-22dp"
+                    android:layout_marginLeft="20dp">
+
+                    <RadioButton
+                        android:id="@+id/rb1to21Affidavit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Proof of Birth"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnSubmit"

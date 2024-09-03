@@ -4,9 +4,11 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import androidx.activity.EdgeToEdge;
@@ -40,6 +42,10 @@ public class BirthForm extends AppCompatActivity {
         Spinner assistanceSpinner = findViewById(R.id.spinnerAssistance);
         Spinner deliverySpinner =  findViewById(R.id.spinnerDelivery);
         Spinner criteriaSpinner = findViewById(R.id.spinnerCriteria);
+        LinearLayout llNameCorrection =  findViewById(R.id.llNameCorrection);
+        LinearLayout llLiterate = findViewById(R.id.llLiterate);
+        LinearLayout llAbove1Year = findViewById(R.id.llAbove1Year);
+        LinearLayout ll1to21 = findViewById(R.id.ll1to21);
 
         List<String> relationItems = Arrays.asList(getResources().getStringArray(R.array.relation));
         CustomSpinnerAdapter relationAdapter = new CustomSpinnerAdapter(this, relationItems);
@@ -91,5 +97,59 @@ public class BirthForm extends AppCompatActivity {
         // Set click listener on both the EditText and ImageView
         etDateOfBirth.setOnClickListener(dateClickListener);
         ivDateIcon.setOnClickListener(dateClickListener);
+
+        criteriaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                switch (position){
+                    case 1:
+                        llNameCorrection.setVisibility(View.VISIBLE);
+                        llLiterate.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        ll1to21.setVisibility(View.GONE);
+                        break;
+
+                    case 2:
+                        llNameCorrection.setVisibility(View.GONE);
+                        llLiterate.setVisibility(View.VISIBLE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        ll1to21.setVisibility(View.GONE);
+                        break;
+
+                    case 3:
+                        llNameCorrection.setVisibility(View.GONE);
+                        llLiterate.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.VISIBLE);
+                        ll1to21.setVisibility(View.GONE);
+                        break;
+
+                    case 4:
+                        llNameCorrection.setVisibility(View.GONE);
+                        llLiterate.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.VISIBLE);
+                        ll1to21.setVisibility(View.GONE);
+                        break;
+
+                    case 5:
+                        llNameCorrection.setVisibility(View.GONE);
+                        llLiterate.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        ll1to21.setVisibility(View.VISIBLE);
+                        break;
+
+                    default:
+                        llNameCorrection.setVisibility(View.GONE);
+                        llLiterate.setVisibility(View.GONE);
+                        llAbove1Year.setVisibility(View.GONE);
+                        ll1to21.setVisibility(View.GONE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 }
